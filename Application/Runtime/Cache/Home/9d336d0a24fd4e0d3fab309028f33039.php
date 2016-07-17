@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -7,13 +7,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="stylesheet" type="text/css" href="__PUBLIC__/bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="__PUBLIC__/stylesheets/theme.css">
-        <link rel="stylesheet" href="__PUBLIC__/font-awesome/css/font-awesome.css">
-        <script src="__PUBLIC__/jquery-1.8.1.min.js" type="text/javascript"></script>
-        <script type="text/javascript" src="__PUBLIC__/layer/layer.min.js"></script>
-        <script src="__PUBLIC__/bootstrap/js/bootstrap.js"></script>
-        <script type="text/javascript" src='__PUBLIC__/layer/extend/layer.ext.js'></script>
+        <link rel="stylesheet" type="text/css" href="/Public/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/Public/stylesheets/theme.css">
+        <link rel="stylesheet" href="/Public/font-awesome/css/font-awesome.css">
+        <script src="/Public/jquery-1.8.1.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/Public/layer/layer.min.js"></script>
+        <script src="/Public/bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src='/Public/layer/extend/layer.ext.js'></script>
 
         <!-- Demo page code -->
         <style type="text/css">
@@ -46,11 +46,11 @@
         <![endif]-->
 
         <!-- Le fav and touch icons -->
-        <link rel="shortcut icon" href="__PUBLIC__/assets/ico/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="__PUBLIC__/assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="__PUBLIC__/assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="__PUBLIC__/assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="__PUBLIC__/assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="/Public/assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/Public/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/Public/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/Public/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="/Public/assets/ico/apple-touch-icon-57-precomposed.png">
     </head>
 
     <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
@@ -79,7 +79,7 @@
                     <div class="block">
                         <div class="block-heading">忘记密码<font>（输入注册时填写的用户名和邮箱）</font></div>
                         <div class="block-body">
-                            <form name="signin" id="form1" method="post" action="{:U('Login/wjpas')}">
+                            <form name="signin" id="form1" method="post" action="<?php echo U('Login/wjpas');?>">
                                 <label>用户名</label>
                                 <input type="text" class="span12" name="user_name" value="" id="num">
                                 <label>邮箱</label>
@@ -95,7 +95,7 @@
                 </div>
             </div>
 
-            <script type="text/javascript" src="__PUBLIC__/Js/login.js"></script>
+            <script type="text/javascript" src="/Public/Js/login.js"></script>
             <script type="text/javascript">
                                     function sub(o) {
                                         //表单验证部分

@@ -3,4 +3,5 @@
 function my($par){
     echo '<pre>';
     var_dump($par);
+    die;
 }
