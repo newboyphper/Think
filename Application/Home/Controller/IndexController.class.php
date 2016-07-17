@@ -23,9 +23,23 @@ class IndexController extends Controller {
      */
 
     public function signup() {
-//        if (is_user_login()) {
-//            $this->redirect('Index/index');
-//        }
+        if (!is_user_login()) {
+             $this->redirect('Login/signin'); 
+        }
+        
+        $user_info = session('user_auth');
+        if($user_info!==null){
+//            $this->assign('name','abc');
+            $class_style=C('class_style');
+            $ClassTable = M('class');
+            $classes = $ClassTable->field('class_name,style')->where(array('is_del' => '0'))->select();
+            $this->assign('class_info',$classes);
+            $this->assign('class_style',$class_style);
+            $this->display();
+        }
+        else{
+            $this->redirect('Login/signin'); 
+        }
         if (IS_GET) {
             //注册页面
             $this->display();

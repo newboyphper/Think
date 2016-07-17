@@ -1,6 +1,6 @@
 <?php
 
-namespace Home\Controller;
+namespace Admin\Controller;
 
 use Think\Controller;
 
@@ -32,7 +32,7 @@ class LoginController extends Controller {
                         $uid = $datanum['id'];
                         $user_info = session('user_auth');
                         if ($user_info['uid'] && $user_info['user_name'] == $user_name) {
-                            $this->success('登录成功！', U('Index/index'));
+                            $this->success('登录成功！', U('register/index'));
                         } else {
                             $this->error('存储错误.');
                         }

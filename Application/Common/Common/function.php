@@ -5,3 +5,14 @@ function my($par){
     var_dump($par);
     die;
 }
+function is_user_login(){
+        $user_info = session('user_auth');
+        if($user_info!==null){
+            return true;
+        }
+        else{
+            return false;
+        }
+    
+    
+}
